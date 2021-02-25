@@ -1,0 +1,45 @@
+# Bir metinde gizli olan kimlik numarasını algılayan bir program yazın.
+# Kimlik numarasının formatının şu şekilde olduğunu biliyoruz:
+# 22 harf, 1 hane, 2 harf, 2 hane, 1 harf, 1 hane (Örneğin: AA4ZA11B1)
+#
+import re
+
+text = "AABZA1111AEGTV5YH678MK4FM53B6"
+
+pattern = r"\w\w\d\w\w\d\d\w\d"
+re.search(pattern, text)
+for match in re.findall(pattern, text):
+    print(match)
+    
+    
+    
+    
+    
+ import re
+giris=input('Bir metin giriniz...:')
+siralama = r"\s\w+@"
+re.search(siralama, giris)
+for match in re.findall(siralama, giris):
+    print(match.strip('@'))
+
+
+#WBir metinde e-posta etki alanları olmayan e-posta adreslerine göre listeleyen bir program yazın.
+
+
+import re
+pattern = '([a-zA-Z0-9]+)(@)'
+test_string = "The advencements in biomarine studies franky@google.com with the investments necessary and Davos sinatra123@yahoo.com. Then New Yorker article on wind farms..."
+result = re.findall(pattern, test_string)
+b = [item[0] for item in result]
+if result:
+    print("result is: ", b)
+else:
+    print("no match.")
+    
+    
+    
+    
+    
+    
+    
+    
